@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace UnorderedList.UnorderedListStack
 {
-    internal class Stack<T>
+    public class Stack<T>
     {
         private Node<T> top;
         public void LinkedListStack()
