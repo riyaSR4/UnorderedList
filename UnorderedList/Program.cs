@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.NetworkInformation;
 using UnorderedList.UnorderedList;
+using UnorderedList.UnorderedListStack;
 
 namespace UnorderedList
 {
@@ -11,6 +12,10 @@ namespace UnorderedList
         {
             Operation operation = new Operation();
             operation.ReadFileAndPerformOperation(unOrderedFilePath);
+            Console.WriteLine("\nStack:");
+            OperationStack operationStack = new OperationStack();
+            operationStack.ReadFileAndPerformOperation(unOrderedFilePath);
+
         }
     }
 }
