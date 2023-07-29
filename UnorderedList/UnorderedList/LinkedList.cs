@@ -86,17 +86,5 @@ namespace UnorderedList.UnorderedList
             Node<T> next = temp.next.next;
             temp.next = next;
         }
-        public void Operation(T word)
-        {
-            int position = Search(word);
-            if (position == -1)
-            {
-                Add(word);
-            }
-            else
-            {
-                DeleteNodeAtParticularPosition(position);
-            }
-        }
     }
 }
