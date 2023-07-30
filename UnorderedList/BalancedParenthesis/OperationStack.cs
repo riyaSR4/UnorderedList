@@ -4,26 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnorderedList.UnorderedListStack
+namespace UnorderedList.BalancedParenthesis
 {
     public class OperationStack
     {
+        Stack<string> stack = new Stack<string>();
         public void ReadFileAndPerformOperation(string filePath)
         {
-            Stack<string> stack = new Stack<string>();
             string readAllText = File.ReadAllText(filePath);
             string[] words = readAllText.Split(" ");
             foreach (var data in words)
             {
-                stack.Push(data);
+                if(data.Equals("("))
+                    stack.Push(data);
+                if (data.Equals(")"))
+                    stack.Pop();
             }
-            stack.Display();
-            Console.WriteLine("Pop:");
-            stack.Pop();
-            stack.Display();
-            Console.WriteLine("Peek:");
-            stack.Peek();
-            stack.Display();
+            if (stack.IsEmpty())
+                Console.WriteLine("Balanced Parenthesis");
+            else
+                Console.WriteLine("Not a Balanced Parenthesis");
+
         }
     }
 }

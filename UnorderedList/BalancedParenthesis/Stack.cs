@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace UnorderedList.UnorderedListStack
+namespace UnorderedList.BalancedParenthesis
 {
     internal class Stack<T>
     {
@@ -55,6 +55,16 @@ namespace UnorderedList.UnorderedListStack
             }
             Console.WriteLine("Value popped is {0}", this.top.data);
             this.top = this.top.next;
+        }
+        internal bool IsEmpty()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return true;
+            }
+            else
+                return false;
         }
     }
 }
