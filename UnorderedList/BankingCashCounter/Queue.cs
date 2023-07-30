@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace UnorderedList.UnorderedListQueue
+namespace UnorderedList.BankingCashCounter
 {
     public class Queue<T>
     {
